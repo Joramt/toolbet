@@ -11,7 +11,6 @@ def main(argv):
         if search_range_beggining > search_range_end:
             return False
         
-
         nb_iteration+=1
         mid_index = math.floor((search_range_beggining + search_range_end) / 2)
 
@@ -23,7 +22,6 @@ def main(argv):
         else:
             return binary_search(array_to_search, value_to_find, mid_index + 1, search_range_end)
     
-    print(argv[1].split(','))
     array_to_search = argv[1].split(',')
     value_to_find = argv[2]
     is_found = binary_search(array_to_search, value_to_find, 0, len(array_to_search) -1)
