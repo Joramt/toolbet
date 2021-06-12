@@ -33,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function() {
         window.binarySearchIteration = 0;
         let testArray = JSON.parse(document.getElementById("binary-search-test-data").value);
         let valueToSearch = document.getElementById("binary-search-number").value;
-        console.log(testArray)
         let isFound = window.binary_search(testArray, valueToSearch, 0, testArray.length - 1)
         alert(`The number ${isFound? "has" : "has'nt" } been found. It took ${window.binarySearchIteration} tries`);
     }
@@ -42,7 +41,6 @@ document.addEventListener("DOMContentLoaded", function() {
         window.linearSearchIteration = 0;
         let testArray = JSON.parse(document.getElementById("linear-search-test-data").value);
         let valueToSearch = document.getElementById("linear-search-number").value;
-        console.log(testArray)
         let isFound = window.linear_search(testArray, valueToSearch)
         alert(`The number ${isFound? "has" : "has'nt" } been found. It took ${window.linearSearchIteration} tries`);
     }

@@ -10,11 +10,7 @@ let binary_search = function (arrayToSearch, valueToFind, searchRangeBeginning, 
     let searchRange = searchRangeBeginning + searchRangeEnd;
     let searchRangeMiddle = Math.floor( searchRange /2);
     let valueMiddle = arrayToSearch[searchRangeMiddle];
-
-    console.log(valueToFind)
-    console.log(valueMiddle)
-    console.log(parseInt(valueToFind) < parseInt(valueMiddle))
-    console.log("=======")
+    
     if(valueMiddle === valueToFind)
         return true;
 
