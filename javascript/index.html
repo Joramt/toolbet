@@ -4,6 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="./search_algo/binary_search.js"></script>
+    <script src="./search_algo/linear_search.js"></script>
+
 </head>
 <body>
     <div>
@@ -15,16 +17,35 @@
 
         <button id="binary-search">Binary search</button>
     </div>
+    <div>
+        <label for="linear-search-number">Number to search :</label>
+        <input id="linear-search-number" type="number" />
+
+        <label for="linear-search-test-data">Test data :</label>
+        <textarea id="linear-search-test-data">["1","2","3","19","88","192","918","1029","1120","12333","1288312"]</textarea>
+
+        <button id="linear-search">Linear search</button>
+    </div>
 </body>
 <script>
-
+document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("binary-search").onclick = () => {
         window.binarySearchIteration = 0;
         let testArray = JSON.parse(document.getElementById("binary-search-test-data").value);
         let valueToSearch = document.getElementById("binary-search-number").value;
         console.log(testArray)
-        isFound = window.binary_search(testArray, valueToSearch, 0, testArray.length - 1)
+        let isFound = window.binary_search(testArray, valueToSearch, 0, testArray.length - 1)
         alert(`The number ${isFound? "has" : "has'nt" } been found. It took ${window.binarySearchIteration} tries`);
     }
+
+    document.getElementById("linear-search").onclick = () => {
+        window.linearSearchIteration = 0;
+        let testArray = JSON.parse(document.getElementById("linear-search-test-data").value);
+        let valueToSearch = document.getElementById("linear-search-number").value;
+        console.log(testArray)
+        let isFound = window.linear_search(testArray, valueToSearch)
+        alert(`The number ${isFound? "has" : "has'nt" } been found. It took ${window.linearSearchIteration} tries`);
+    }
+});
 </script>
 </html>

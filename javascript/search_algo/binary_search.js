@@ -1,3 +1,6 @@
+// Complexity O log(n) since each iteration we divide by 2 the set to search
+// Only works on sorted array
+
 let binary_search = function (arrayToSearch, valueToFind, searchRangeBeginning, searchRangeEnd) {
 
     if(searchRangeBeginning > searchRangeEnd)
@@ -19,8 +22,6 @@ let binary_search = function (arrayToSearch, valueToFind, searchRangeBeginning, 
         return binary_search(arrayToSearch, valueToFind, searchRangeBeginning, searchRangeMiddle - 1)
     else 
         return binary_search(arrayToSearch, valueToFind, searchRangeMiddle + 1, searchRangeEnd)
-    
-
 }
 
 
